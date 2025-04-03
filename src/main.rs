@@ -1,12 +1,6 @@
-// use actix_files::NamedFile;
+use actix_files as fs;
 use actix_web::{web, App, HttpServer, HttpResponse, Responder};
 use tera::{Tera, Context};
-
-// struct variables
-// struct WebState {
-//     username: String,
-//     darkmode: bool,
-// }
 
 async fn goto(tera: web::Data<Tera>, page: &str) -> impl Responder {
     let mut ctx = Context::new();
@@ -48,6 +42,7 @@ async fn main() -> std::io::Result<()> {
         let tera_clone = tera.clone(); 
         App::new()
             .app_data(web::Data::new(tera_clone))
+            .service(fs::Files::new("/static", "./public"))
             .route("/", web::get().to(index))
             .route("/about", web::get().to(about))
             .route("/projects", web::get().to(projects))

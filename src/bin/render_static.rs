@@ -1,7 +1,9 @@
+/* render_static.rs
+ * This script serves to generate static files that can be used for deployment to vercel
+ * Generated code can be found in public/ directory
+*/
 use std::fs;
 use tera::{Tera, Context};
-
-// Script serves to generate static files for vercel
 
 fn main() {
     let tera = match Tera::new("templates/**/*") {
@@ -26,7 +28,7 @@ fn main() {
             }
         };
 
-        // Update the navigation links to include .html
+        // Update the navigation links & static file service
         let updated_html = rendered_html.replace(
             r#"href="/about"#,
             r#"href="/about.html"#,
@@ -39,7 +41,8 @@ fn main() {
         ).replace(
             r#"href="/contact"#,
             r#"href="/contact.html"#,
-        );
+        )
+        .replace(r#"src="/static/images/"#, r#"src="/images/"#);
 
         fs::create_dir_all("public").unwrap();
         let file_path = format!("public/{}.html", page);
