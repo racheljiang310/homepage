@@ -1,47 +1,54 @@
 {% extends "base.html" %}
 {% block title %}About{% endblock %}
 {% block content %}
-    <h1>Rachel Jiang</h1>
-    <img src="/static/images/portrait.jpg" alt="Digital Art credits go to Damon Chastain">
-    <p> 
-        I'm a college student who dreams to make an impact in engineering research and development.
-        I'll be obtaining a BS in Computer Science from UC Santa Barbara in June 2025, and will be
-        starting her Masters in Electrical Computer Engineering at Carnegie Mellon University in 
-        August 2025. My research interest lies at the intersection between software and hardware
-        with a focus on networks, security and architecture.
-    </p>
-    <p>
-        I'm heavily involved in the aerospace industry, as I was a 2x software engineering intern 
-        for Application Software and Flight Reliability teams at SpaceX, and I'll be returning
-        for the Starlink Integration and Test Software team in Summer of 2025. I was also a Test
-        and Flight Operations software engineering intern at Blue Origin. In these roles, I was
-        worked on critical software that impact the change engineering, supply chain, manufacturing
-        and risk assessment workflows throughout the organizations. 
-    </p>
-    <p>
-        Since my freshmen year at UC Santa Barbara, I've been an active undergraduate learning
-        assistant for a variety of undergraduate courses ranging from Data Structures and Algorithms, 
-        Introduction to Computer Science, Problem Solving, Formal Languages and Automata, and 
-        project-based courses. In this role, I held weekly office hours to assist students who
-        needed help, and actively participated in teaching team decisions that would maximize the
-        quality of student learning. 
-    </p>
-    <p>
-        Curious and adventurous in nature, I've heavily delved into a range of projects, clubs, and
-        research initiatives. As a controls software engineer at Gaucho Racing, I work with fellow
-        physics, materials, electrical, and mechanical undergraduate engineers to build an electric
-        race car for Formula SAE. My main focus is embedded software for the accumulator unit in our
-        battery management system of our vehicle. As a research apprentice in the Security Lab, I 
-        collaborated with my peers to develop a better framework for understanding and reproducing
-        common security vulnerabilities from the MITRE CVE dataset through using Docker containers.
-        As an undergraduate research assistant for the Architecture Lab (ArchLab), I work with peers, 
-        graduate students, and my professor to study, design and realize a creative solution to
-        address the growing energy and time requirements for transferring large-scale datasets within
-        a data center. 
-    </p>
-    <p>
-        Looking to the future, I hope to continue exploring the world of engineering through diving
-        down the layers of abstraction within computers and electronic devices. In doing so, I'm 
-        excited to optimize the speed, efficiency, reliability and security of tomorrow's technology.
-    </p>
+<div class="home-container">
+    <div class="main-section" width="60%">
+        <p> 
+            I'm a college student who dreams to make an impact in engineering research and development.
+            I'll be obtaining a BS in Computer Science from UC Santa Barbara in June 2025, and will be
+            starting her Masters in Electrical Computer Engineering at Carnegie Mellon University in 
+            August 2025. My research interest lies at the intersection between software and hardware
+            with a focus on networks, security and architecture.
+        </p>
+        <p>
+            I'm heavily involved in the aerospace industry, as I was a 2x software engineering intern 
+            for Application Software and Flight Reliability teams at SpaceX, and I'll be returning
+            for the Starlink Integration and Test Software team in Summer of 2025. I was also a Test
+            and Flight Operations software engineering intern at Blue Origin. In these roles, I was
+            worked on critical software that impact the change engineering, supply chain, manufacturing
+            and risk assessment workflows throughout the organizations. 
+        </p>
+        <p>
+            Since my freshmen year at UC Santa Barbara, I've been an active undergraduate learning
+            assistant for a variety of undergraduate courses ranging from Data Structures and Algorithms, 
+            Introduction to Computer Science, Problem Solving, Formal Languages and Automata, and 
+            project-based courses. In this role, I held weekly office hours to assist students who
+            needed help, and actively participated in teaching team decisions that would maximize the
+            quality of student learning. 
+        </p>
+        <p>
+            Curious and adventurous in nature, I've heavily delved into a range of projects, clubs, and
+            research initiatives. As a controls software engineer at Gaucho Racing, I work with fellow
+            physics, materials, electrical, and mechanical undergraduate engineers to build an electric
+            race car for Formula SAE. My main focus is embedded software for the accumulator unit in our
+            battery management system of our vehicle. As a research apprentice in the Security Lab, I 
+            collaborated with my peers to develop a better framework for understanding and reproducing
+            common security vulnerabilities from the MITRE CVE dataset through using Docker containers.
+            As an undergraduate research assistant for the Architecture Lab (ArchLab), I work with peers, 
+            graduate students, and my professor to study, design and realize a creative solution to
+            address the growing energy and time requirements for transferring large-scale datasets within
+            a data center. 
+        </p>
+        <p>
+            Looking to the future, I hope to continue exploring the world of engineering through diving
+            down the layers of abstraction within computers and electronic devices. In doing so, I'm 
+            excited to optimize the speed, efficiency, reliability and security of tomorrow's technology.
+        </p>
+    </div>
+    <div class="main-section" width="40%">
+        <img
+                src="/static/images/portrait.jpg" 
+                alt="Digital Art credits go to Damon Chastain">
+    </div>
+</div>
 {% endblock %}

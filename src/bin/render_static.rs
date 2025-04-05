@@ -42,7 +42,8 @@ fn main() {
             r#"href="/contact"#,
             r#"href="/contact.html"#,
         )
-        .replace(r#"src="/static/images/"#, r#"src="/images/"#);
+        .replace(r#"src="/static/images/"#, r#"src="/images/"#)
+        .replace(r#"href="/static/styles"#, r#"href="/styles"#);
 
         fs::create_dir_all("public").unwrap();
         let file_path = format!("public/{}.html", page);
